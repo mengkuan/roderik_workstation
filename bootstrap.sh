@@ -71,4 +71,9 @@ if [[ -d dmg ]]; then
 else
   git clone https://github.com/opscode-cookbooks/dmg.git
 fi
+if [[ -d roderik_workstation ]]; then
+  cd roderik_workstation && git pull && cd ..
+else
+  git clone https://github.com/roderik/roderik_workstation.git
+fi
 soloist
