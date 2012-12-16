@@ -49,6 +49,10 @@ recipes:
 - pivotal_workstation::php54
 - pivotal_workstation::mod-jk
 - pivotal_workstation::composer
+- pivotal_workstation::sequelpro
+- pivotal_workstation::tower
+- pivotal_workstation::kaleidoscope2
+- pivotal_workstation::omnigraffle
 - roderik_workstation::sublime_packages
 - roderik_workstation::bashrc
 - roderik_workstation::inputrc
