@@ -53,6 +53,7 @@ recipes:
 - pivotal_workstation::tower
 - pivotal_workstation::kaleidoscope2
 - pivotal_workstation::omnigraffle
+- pivotal_workstation::standby-delay
 - roderik_workstation::sublime_packages
 - roderik_workstation::bashrc
 - roderik_workstation::inputrc
