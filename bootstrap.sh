@@ -7,6 +7,7 @@ else
 fi
 
 mkdir -p ~/cookbooks; cd ~/cookbooks
+
 cat > soloistrc <<EOF
 cookbook_paths:
 - $PWD
@@ -15,7 +16,9 @@ recipes:
 - pivotal_workstation::xquartz
 - pivotal_workstation::locate_on
 - pivotal_workstation::1password
+- pivotal_workstation::gem_setup
 - pivotal_workstation::bash4
+- pivotal_workstation::bash_it
 - pivotal_workstation::bash_completion
 - pivotal_workstation::coreutils
 - pivotal_workstation::findutils
@@ -24,7 +27,6 @@ recipes:
 - pivotal_workstation::siege
 - pivotal_workstation::xmlstarlet
 - pivotal_workstation::watch
-- pivotal_workstation::gem_no_rdoc_no_ri
 - pivotal_workstation::rvm
 - pivotal_workstation::alfred
 - pivotal_workstation::chrome
@@ -55,17 +57,20 @@ recipes:
 - pivotal_workstation::omnigraffle
 - pivotal_workstation::standby-delay
 - roderik_workstation::sublime_packages
-- roderik_workstation::bashrc
 - roderik_workstation::inputrc
 - kmachine::update
 - kmachine::ssh_config
-- kmachine::kms
 - kmachine::kstrano
 - kmachine::vagrant
 - kmachine::kdeploy
 - kmachine::apache_kdeploy
 - kmachine::phpconfig
 EOF
+
+#- roderik_workstation::bashrc
+#- kmachine::kms
+
+
 if [[ -d pivotal_workstation ]]; then
   cd pivotal_workstation && git pull && cd ..
 else
