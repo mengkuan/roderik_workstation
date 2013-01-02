@@ -5,14 +5,15 @@ node.override['bash_it'] ={
     'plugins'    => %w[base git rvm ssh vagrant ]
   },
   'custom_plugins' => %w[
-    bash_it/custom/disable_ctrl-s_output_control.bash
-    bash_it/custom/enable_ctrl-o_history_execution.bash
-    bash_it/custom/history_settings.bash
     bash_it/custom/ensure_usr_local_bin_first.bash
-    bash_it/custom/add_user_initials_to_git_prompt_info.bash
+    bash_it/custom/aliases.bash
+    bash_it/custom/base.bash
+    bash_it/custom/exports.bash
+    bash_it/custom/functions.bash
   ],
-  'theme' => 'bobby',
-  'dir' => '/etc/bash_it'
+  'theme' => 'roderik',
+  'dir' => '/etc/bash_it',
+  'repository' => 'https://github.com/roderik/bash-it.git'
 }
 
 if node["platform"] == "ubuntu"
