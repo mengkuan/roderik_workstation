@@ -40,6 +40,7 @@ recipes:
 - pivotal_workstation::iterm2
 - pivotal_workstation::ssh_copy_id
 - pivotal_workstation::skype
+- pivotal_workstation::menumeters
 - pivotal_workstation::unhide_home
 - pivotal_workstation::standby-delay
 - pivotal_workstation::expand_save_panel_by_default
