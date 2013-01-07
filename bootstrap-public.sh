@@ -15,7 +15,6 @@ recipes:
 - pivotal_workstation::create_var_chef_cache
 - pivotal_workstation::xquartz
 - pivotal_workstation::locate_on
-- pivotal_workstation::1password
 - pivotal_workstation::gem_setup
 - pivotal_workstation::bash4
 - pivotal_workstation::bash_it
@@ -24,37 +23,24 @@ recipes:
 - pivotal_workstation::findutils
 - pivotal_workstation::wget
 - pivotal_workstation::pwgen
-- pivotal_workstation::siege
-- pivotal_workstation::xmlstarlet
 - pivotal_workstation::watch
 - pivotal_workstation::rvm
 - pivotal_workstation::alfred
-- pivotal_workstation::chrome
 - pivotal_workstation::dropbox
 - pivotal_workstation::firefox
-- pivotal_workstation::github_for_mac
-- pivotal_workstation::bartender
-- pivotal_workstation::istatmenus
-- pivotal_workstation::phpstorm
-- pivotal_workstation::things
-- pivotal_workstation::viscosity
 - pivotal_workstation::root_shell_bash
 - pivotal_workstation::optipng
 - pivotal_workstation::jpegoptim
 - pivotal_workstation::gnu-tar
-- pivotal_workstation::mysql
-- pivotal_workstation::postgres
-- pivotal_workstation::psycopg2
-- pivotal_workstation::mysql-python
 - pivotal_workstation::imagemagick
+- pivotal_workstation::ack
+- pivotal_workstation::flycut
+- pivotal_workstation::gitx
+- pivotal_workstation::heroku_toolbelt
+- pivotal_workstation::iterm2
+- pivotal_workstation::ssh_copy_id
+- pivotal_workstation::skype
 - pivotal_workstation::unhide_home
-- pivotal_workstation::php54
-- pivotal_workstation::mod-jk
-- pivotal_workstation::composer
-- pivotal_workstation::sequelpro
-- pivotal_workstation::tower
-- pivotal_workstation::kaleidoscope2
-- pivotal_workstation::omnigraffle
 - pivotal_workstation::standby-delay
 - pivotal_workstation::expand_save_panel_by_default
 - pivotal_workstation::increase_window_resize_speed_for_cocoa_applications
@@ -81,7 +67,6 @@ recipes:
 - pivotal_workstation::search_the_current_folder_by_default
 - pivotal_workstation::avoid_creating_ds_store_files_on_network_volumes
 - pivotal_workstation::disable_the_warning_when_changing_a_file_extension
-- pivotal_workstation::disable_disk_image_verification
 - pivotal_workstation::automatically_open_a_new_finder_window_when_a_volume_is_mounted
 - pivotal_workstation::use_column_view_in_all_finder_windows_by_default
 - pivotal_workstation::disable_the_warning_before_emptying_the_trash
@@ -103,14 +88,19 @@ recipes:
 - pivotal_workstation::add_a_context_menu_item_for_showing_the_web_inspector_in_web_views
 - pivotal_workstation::disable_send_and_reply_animations_in_mail
 - pivotal_workstation::prevent_time_machine_from_prompting_to_use_new_hard_drives_as_backup_volume
-- roderik_workstation::sublime_packages
+- pivotal_workstation::osx_disable_natural_scrolling
+- pivotal_workstation::terminal_focus
+- pivotal_workstation::user_owns_usr_local
+- pivotal_workstation::window_focus
+- pivotal_workstation::workspace_directory
+- pivotal_workstation::set_screensaver_preferences
 - roderik_workstation::inputrc
 EOF
 
 if [[ -d pivotal_workstation ]]; then
   cd pivotal_workstation && git pull && cd ..
 else
-  git clone https://github.com/roderik/pivotal_workstation.git
+  git clone https://github.com/mengkuan/pivotal_workstation.git
 fi
 if [[ -d dmg ]]; then
   cd dmg && git pull && cd ..
@@ -120,7 +110,7 @@ fi
 if [[ -d roderik_workstation ]]; then
   cd roderik_workstation && git pull && cd ..
 else
-  git clone https://github.com/roderik/roderik_workstation.git
+  git clone https://github.com/mengkuan/roderik_workstation.git
 fi
 
 soloist
